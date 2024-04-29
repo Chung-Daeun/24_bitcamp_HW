@@ -24,8 +24,7 @@ public class _10 {
 		}
 		System.out.println("\nTotal: " + sum);
 		
-		sc.close();
+
 	}
-	
 
 }

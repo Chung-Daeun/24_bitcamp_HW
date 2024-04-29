@@ -18,14 +18,9 @@ public class _10 {
 		for(int i = 0; i < intArr.length; i++) {
 			intArr[i] = sc.nextInt();
 			sum += intArr[i];
-		}
-		for(int i = 0; i < intArr.length; i++) {
 			System.out.print(intArr[i] + " ");
 		}
-		System.out.println("\nTotal: " + sum);
-		
-		sc.close();
+
 	}
-	
 
 }
