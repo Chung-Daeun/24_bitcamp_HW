@@ -1,0 +1,14 @@
+package _01_Basic;
+
+public class _06to08 {
+	
+	public static void main(String[] args) {
+		
+//		6. 1 ~ 100까지 합을 while문으로 출력
+
+//		7. 1 ~ 100까지 합을 do ~ while문으로 출력
+
+//		8. 1 ~ 100까지 합을 for문으로 출력
+	}
+
+}
