@@ -29,7 +29,7 @@ public class _02 {
 				System.out.println("박수짝");
 			}
 		}
-		
+		sc.close();
 		// switch문으로도 풀어보기
 	}
 

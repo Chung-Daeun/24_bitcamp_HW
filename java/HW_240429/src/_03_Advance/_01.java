@@ -28,7 +28,7 @@ public class _01 {
 			
 			System.out.println(std[i] + "원: " + cash[i] + "개");
 		}
-		
+		sc.close();
 	}
 
 }

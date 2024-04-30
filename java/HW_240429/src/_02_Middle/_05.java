@@ -21,9 +21,9 @@ public class _05 {
 		System.out.println("조건에 맞춰 출력");
 		for(int i = 0; i < ranArr.length; i++) {
 			if(i % 2 == 0)
-				System.out.print(ranArr[i / 2] + " ");
+				System.out.print(ranArr[ranArr.length - 2 - i] + " ");
 			else
-				System.out.print(ranArr[ranArr.length - 1 - (i / 2)] + " ");
+				System.out.print(ranArr[i] + " ");
 		}
 	}
 
