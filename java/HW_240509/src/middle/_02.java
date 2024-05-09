@@ -32,6 +32,7 @@ public class _02 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		sc.close();
 	}
 
 }
