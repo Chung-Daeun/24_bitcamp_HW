@@ -16,16 +16,14 @@ public class _01 {
 		System.out.println("문자열을 입력하세요.");
 		StringBuilder sb = new StringBuilder(sc.nextLine());
 		
-		for (int i = 1; i < sb.length(); i++) {
-			for(int j = 0; j < i; j++) {
-				if(sb.charAt(i) == sb.charAt(j)) {
-					sb.deleteCharAt(i);
-					i--;
-				}
+		for (int i = 0; i < sb.length() - 1; i++) {
+			if(sb.charAt(i + 1) == sb.charAt(i)) {
+				sb.deleteCharAt(i + 1);
+				i--;
 			}
 		}
 		
-		System.out.println("중복제거!");
+		System.out.println("연속된 중복제거!");
 		System.out.println(sb);
 		
 		sc.close();
