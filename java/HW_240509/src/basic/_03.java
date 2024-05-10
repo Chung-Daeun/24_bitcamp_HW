@@ -19,6 +19,7 @@ public class _03 {
 		}
 		
 		System.out.println(arrInt);
+		sc.close();
 	}
 
 }

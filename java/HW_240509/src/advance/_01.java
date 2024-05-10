@@ -18,7 +18,7 @@ public class _01 {
 		try {
 			cal.setTime(sdf.parse("2001-12-19"));
 			for (int i = 2001; i < 2022; i++) {
-				if(leapYear(i)) {
+				if(isLeapYear(i)) {
 					cal.add(Calendar.DATE, 1);
 				}
 				cal.add(Calendar.YEAR, 1);
@@ -31,7 +31,7 @@ public class _01 {
 		
 	}
 
-	static boolean leapYear(int year) {
+	static boolean isLeapYear(int year) {
 		return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
 	}
 }

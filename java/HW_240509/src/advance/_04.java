@@ -23,8 +23,16 @@ public class _04 {
 		
 		for(int i = 0; i < 6; i++) {
 			arrInt.add(sc.nextInt());
+			//중복제거 -> 문제 조건을 좀 읽읍시다!
+			for(int j = 0; j < i; j++) {
+				if(arrInt.get(i) == arrInt.get(j)) {
+					System.out.println("중복입니다 다시 입력하세요!");
+					arrInt.remove(i);
+					arrInt.add(sc.nextInt());
+				}
+			}
 		}
-//		System.out.println(arrInt);
+		System.out.println(arrInt);
 		
 		// 모든 합을 저장한 List만들기
 		List<Integer> arrIntSum = new ArrayList<Integer>();

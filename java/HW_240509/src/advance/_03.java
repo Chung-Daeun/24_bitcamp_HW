@@ -31,8 +31,8 @@ public class _03 {
 			}
 			
 		}
-		
-		System.out.println(ans + ", " + (ans + 1));
+		// 문제를 잘못 읽음 -> 수를 촐력해야하는데 인덱스 출력으로 잘못 읽어서 수정
+		System.out.println(arrInt.get(ans) + ", " + arrInt.get(ans + 1));
 		
 		
 		sc.close();

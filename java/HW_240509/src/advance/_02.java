@@ -37,12 +37,15 @@ public class _02 {
 			
 			for(int i = 0; i <= Math.abs(diff / 1000 / 60 / 60 / 24); i++) {
 				
+				// 둘이 같을 수도 있다는 생각을 못했다!!!세상에나
 				if(diff > 0) {
-					System.out.println(sdf.format(cal2.getTimeInMillis()));
+					System.out.println(sdf.format(cal2.getTimeInMillis()));	//format의 매개변수는 Date가 맞는데 Date가 long을 입력받아 생성되므로 long을 줘도 알아서 Date로 변환해줌.
 					cal2.add(Calendar.DATE, 1);
-				} else {
+				} else if(diff < 0 ){
 					System.out.println(sdf.format(cal1.getTimeInMillis()));
 					cal1.add(Calendar.DATE, 1);
+				} else {
+					System.out.println("같은날 입니다.");
 				}
 				
 			}
