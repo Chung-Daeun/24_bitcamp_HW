@@ -2,7 +2,6 @@ package middle;
 
 import java.util.HashMap;
 import java.util.Map;
-import middle._02;
 
 public class Use {
 
@@ -12,6 +11,7 @@ public class Use {
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		
 		_02 method = new _02();
+//		_03 printReMap = new _03();
 		
 		map.put(1, 2);
 		map.put(-1, -2);
@@ -24,6 +24,8 @@ public class Use {
 		map.put(16, -92);
 		
 		System.out.println(method.getMaxMul(map));
+		
+		_03.printKVDesc(map);
 	}
 
 }
