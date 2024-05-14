@@ -13,7 +13,7 @@ public enum Cafe {
 		@Override
 		public int totalPrice(int optionOrder, int normalOrder) {
 			// TODO Auto-generated method stub
-			return optionOrder * (this.getPrice() + 500) + normalOrder * this.getPrice();
+			return optionOrder * (this.getPrice() + 300) + normalOrder * this.getPrice();
 		}
 	},
 	LATTE(3000) {
