@@ -20,13 +20,13 @@ public class IntArrUtils {
 		return min;
 	}
 
-	public static int getMid(int[] intArr) {
+	public static double getMid(int[] intArr) {
 		Arrays.sort(intArr);
 		
 		if(intArr.length % 2 != 0) {
-			return intArr[intArr.length / 2];
+			return (double)intArr[intArr.length / 2];
 		} else { 
-			return (intArr[intArr.length / 2] + intArr[intArr.length / 2 - 1]) / 2;
+			return (double)(intArr[intArr.length / 2] + intArr[intArr.length / 2 - 1]) / 2;
 		}
 	}
 }
