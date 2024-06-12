@@ -16,6 +16,9 @@ public class BankApplication {
 	public void makeAccount(String accountNumber, String name, int money) {
 		if(index >= 100)
 			System.out.println("계좌를 추가할 수 없습니다.");
+		else if(money > 50000000) {
+			System.out.println("입금가능 금액을 초과했습니다. 5천만원까지만 보유 가능합니다.");
+		}
 		else {
 			this.accountArr[this.index] = new Account(accountNumber, name, money);
 			this.index++;
@@ -25,7 +28,7 @@ public class BankApplication {
 	// 계좌목록
 	public void printAccount() {
 		for(Account acc : accountArr) {
-			if(!acc.getAccountNumber().equals(null)) {
+			if(acc != null) {
 				System.out.println(acc.getAccountNumber() + "\t" + acc.getName() + "\t" + acc.getMoney());				
 			}
 		}
@@ -33,6 +36,8 @@ public class BankApplication {
 	// 예금
 	public void deposit(String accountNumber, int money) {
 		for(Account acc : accountArr) {
+			if(acc == null)
+				break;
 			if(accountNumber.equals(acc.getAccountNumber())) {
 				int newMoney = acc.getMoney() + money;
 				if(newMoney > 50000000) {
@@ -48,6 +53,8 @@ public class BankApplication {
 	// 출금
 	public void withdraw(String accountNumber, int money) {
 		for(Account acc : accountArr) {
+			if(acc == null)
+				break;
 			if(accountNumber.equals(acc.getAccountNumber())) {
 				int newMoney = acc.getMoney() - money;
 				if(newMoney < 0) {
