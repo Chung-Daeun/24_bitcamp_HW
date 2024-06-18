@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ans = [];
+        const userNum = [];
+
+        for(let i = 0 ; i < 6; i++){
+            userNum.push(window.prompt("1~45까지의 숫자를 입력하세요."));
+            if (userNum[i] < 1 || userNum[i] > 45){
+                userNum.pop();
+                i--;
+                break;
+            }
+            for(let j = 0; j < i; j++){
+                if(userNum[i] == userNum[j]){
+                    userNum.pop();
+                    i--;
+                    break;
+                }
+            }
+            ans.push(Math.round(Math.random() * 45));
+        }
+        ans.push(Math.round(Math.random() * 45));
+
+        document.writeln(`이번주 로또 당첨 번호는: ${ans.slice(0, 6)}, 보너스 번호: ${ans[6]}<br>`);
+        document.writeln(`구입한 로또 번호: ${userNum}<br>`);
+
+        let same = 0;
+
+        for(let i = 0 ; i < 6; i ++){
+            for(n of userNum){
+                if(ans[i] == n){
+                    same++;
+                }
+            }
+        }
+
+        switch(same){
+            case 6:
+                document.write(`1등!!!!!!!!!!!`);
+                break;
+            case 5:
+                let bonus = false;
+                for(n of userNum){
+                    if(ans[6] == n){
+                        bonus = true;
+                    }
+                }
+                if(bonus){
+                    document.write("2등!!!!!!!!!");
+                } else {
+                    document.write("3등!!!!!!!!")
+                }
+                break;
+            case 4:
+                document.write("4등!!!!!!")
+                break;
+            default:
+                document.write("꽝!");
+        }
+    </script>
+</body>
+</html>
