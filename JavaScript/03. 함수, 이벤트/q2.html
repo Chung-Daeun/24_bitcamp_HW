@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function max() {
+            let num1 = window.prompt("비교할 첫 번째 숫자:");
+            let num2 = window.prompt("비교할 두 번째 숫자:");
+
+            let ans1 = Math.max(num1, num2);
+            let ans2 = Math.min(num1, num2);
+
+            alert(`${ans1}(이)가 ${ans2}보다 큽니다.`)
+        }
+
+        max();
+
+    </script>
+</body>
+</html>

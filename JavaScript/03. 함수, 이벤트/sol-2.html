@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num1 = parseInt(prompt("비교할 첫 번째 숫자 :"));
+        const num2 = parseInt(prompt("비교할 두 번째 숫자 :"));
+
+        const result = num1 > num2 ? `${num1}(이)가 ${num2}보다 큽니다.`
+                    : num2 > num1 ? `${num2}(이)가 ${num1}보다 큽니다.`
+                    : `${num1}(이)가 ${num2}와 같습니다.`;
+        alert(result);
+    </script>
+</body>
+</html>

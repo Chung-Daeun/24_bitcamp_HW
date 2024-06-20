@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumMulti1(num1, num2) {
+            return num1 === num2 ? num1 * num2 : num1 + num2;
+        }
+
+        const sumMulti2 = (num1, num2) => num1 === num2 ? num1 * num2 : num1 + num2;
+
+        console.log(sumMulti1(10, 5));
+        console.log(sumMulti1(10, 10));
+
+        console.log(sumMulti2(10, 5));
+        console.log(sumMulti2(10, 10));
+    </script>
+</body>
+</html>
