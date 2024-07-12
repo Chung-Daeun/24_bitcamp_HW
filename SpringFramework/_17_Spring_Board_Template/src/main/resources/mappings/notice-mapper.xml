@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD MAPPER 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="NoticeDao">
+    <insert id="post" parameterType="board">
+        INSERT INTO NOTICE(TITLE, CONTENT, WRITER_ID)
+        VALUES (
+                   #{title},
+                   #{content},
+                   #{WRITER_ID});
+    </insert>
+    <update id="modify" parameterType="board">
+        UPDATE NOTICE SET TITLE = #{title}, CONTENT = #{content}, MODDATE = #{moddate};
+    </update>
+    <delete id="delete" parameterType="int">
+        DELETE FROM NOTICE WHERE ID = #{id};
+    </delete>
+    <select id="getNoticeList" resultType="board">
+        SELECT ID, TITLE, CONTENT, WRITER_ID, REGDATE, MODDATE, CNT
+            FROM NOTICE;
+    </select>
+    <select id="getNotice" parameterType="int" resultType="board">
+        SELECT ID, TITLE, CONTENT, WRITER_ID, REGDATE, MODDATE, CNT
+            FROM NOTICE
+            WHERE ID = #{id};
+    </select>
+</mapper>
